@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Store</title>
+
+  <!-- font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- custom css file link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header section start -->
+  <header class="header">
+
+    <!-- logo and pharmacy store name -->
+    <a href="#" class="logo"><i class="fa-solid fa-prescription-bottle-medical"></i>    Hacktiv8 Care</a>
+
+    </div>
+    <!-- search and shopping cart icons -->
+    <div class="icons">
+      <div class="fa-solid fa-magnifying-glass" id="search-button"></div>
+      <div class="fa-solid fa-cart-shopping" id="cart-button"></div>
+      <button class="button" id="reg-button" type="button" style="margin-left: 50px;"> Sign Up </button>
+      <button class="button" id="log-button" type="button" style="margin-left: 10px;"> Login </button>
+    </div>
+
+    <!-- search form  -->
+    <form action="" class="search-form">
+      <input type="search" id="search-box" onkeyup="myFunction()" placeholder="search here...">
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!-- shopping cart form -->
+    <div class="shopping-cart" id="shopping-cart">
+    <!-- DOM Shopping Cart -->
+    </div>
+
+  </header>
+
+  <!-- header section end -->
+
+  <!-- home section start -->
+  <section class="home" id="home">
+
+    <!-- register form -->
+    <!-- The Modal -->
+    <div id="ModalReg" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div>
+          <span class="close" id="close-reg">&times;</span>
+        </div>
+        <form class="form-register" id="form-register" style="display: flex; flex-direction: column;">
+
+          <div class="mb-3 row">
+            <label for="register-name" class="col-sm-2 col-form-label" style="font-size: 2rem;">Nama</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="register-name" style="height: 32px; font-size: 1.5rem;">
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="register-email" class="col-sm-2 col-form-label" style="font-size: 2rem;">Email</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="register-email" style="height: 32px; font-size: 1.5rem;">
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="register-password" class="col-sm-2 col-form-label" style="font-size: 2rem;" >Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="register-password" style="height: 32px; font-size: 1.5rem;">
+            </div>
+          </div>
+
+          <button type="submit" class="button" > Sign Up </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- login form -->
+    <div id="ModalLog" class="modal">
+      <!-- Modal content -->
+      <form class="modal-content" id="login-form">
+        <div>
+          <span class="close" id="close-log">&times;</span>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="login-email" class="col-sm-2 col-form-label" style="font-size: 2rem;">Email</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="login-email" style="height: 32px; font-size: 1.5rem;">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="login-password" class="col-sm-2 col-form-label" style="font-size: 2rem;" >Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="login-password" style="height: 32px; font-size: 1.5rem;">
+          </div>
+        </div>
+
+        <button type="submit" class="button" id="login-btn">Login</button>
+      </form>
+    </div>
+    
+    <!-- home section content -->
+    <div class="content">
+      <h3>medicine that makes you <span>healthier</span> as before</h3>
+      <p>"Looking for a trusted pharmacy that puts your health first? Look no further than Hacktiv8 Care. We offer a wide range of products and services to help you feel your best."</p>
+      <a href="#products" class="button">Shop Now</a>
+    </div>
+  </section>
+  <!-- home section end -->
+
+  <!-- products section start -->
+  <section class="products" id="products">
+    <h1 class="heading">Our Products</h1>
+
+    <!-- price filter form -->
+    <form class="form-filter">
+      <label for="sort-by">Sort by:</label>
+      <select class="sort-by" id="sort-by">
+        <option value="Lowest">Lowest</option>
+        <option value="Highest">Highest</option>
+        <option value="Mask">Mask</option> <!--additional-->
+        <option value="Generic">Generic</option> <!--additional-->
+        <option value="Patent">Patent</option> <!--additional-->
+        <option value="Supplement">Supplement</option> <!--additional-->
+      </select>
+    </form>
+  
+    <!-- product container -->
+    <div class="box-container">
+      <!-- DOM product disini -->
+    </div>
+  </section>
+  <!-- product section end -->
+
+  <!-- custom js file link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="../index.js"></script>
+</body>
+
+</html>
